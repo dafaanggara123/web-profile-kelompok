@@ -1230,6 +1230,93 @@
 }
 
 
+/* ========================================
+   REVISION 03 - NAVIGATION & INTERACTION
+======================================== */
+
+/* Navigation hover */
+.nav-links a {
+    transition:
+        color .25s ease,
+        opacity .25s ease;
+}
+
+.nav-links a:hover {
+    color: var(--teal);
+}
+
+/* Navigation indicator */
+.nav-links a::after {
+    transition: width .25s ease;
+}
+
+/* Button interaction */
+.button,
+.nav-button,
+.contact-button {
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+/* Card interaction */
+.identity-panel,
+.principle {
+    transition:
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.identity-panel:hover {
+    box-shadow:
+        0 24px 55px rgba(32, 44, 57, .11);
+}
+
+.principle:hover {
+    box-shadow:
+        0 8px 20px rgba(32, 44, 57, .045);
+}
+
+/* Keyboard accessibility */
+.nav-links a:focus-visible,
+.button:focus-visible,
+.nav-button:focus-visible,
+.contact-button:focus-visible,
+.footer-social a:focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 4px;
+}
+
+/* Better anchor navigation */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+/* Button pressed state */
+.button:active,
+.nav-button:active {
+    transform: scale(.98);
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
     </style>
 </head>
 
