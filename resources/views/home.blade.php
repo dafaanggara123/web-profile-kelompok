@@ -1131,6 +1131,105 @@
 }
 
 
+/* ========================================
+   REVISION 02 - VISUAL REFINEMENT
+======================================== */
+
+/* Better hero proportions */
+.hero {
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(0, .95fr);
+
+    gap: clamp(35px, 5vw, 65px);
+    padding-top: clamp(75px, 8vw, 105px);
+    padding-bottom: clamp(70px, 7vw, 95px);
+}
+
+/* Typography refinement */
+.hero h1 {
+    max-width: 650px;
+    line-height: 1.08;
+    letter-spacing: -2.7px;
+}
+
+/* Description readability */
+.hero-description {
+    max-width: 500px;
+    line-height: 1.9;
+}
+
+/* Identity panel */
+.identity-panel {
+    padding: clamp(24px, 3vw, 34px);
+
+    border: 1px solid rgba(84, 124, 120, .24);
+
+    box-shadow:
+        0 20px 48px rgba(32, 44, 57, .085),
+        0 4px 12px rgba(32, 44, 57, .025);
+}
+
+/* Identity information */
+.identity-heading {
+    padding-top: 27px;
+    padding-bottom: 27px;
+}
+
+.detail-row {
+    padding: 15px 0;
+}
+
+/* Working section */
+.principles {
+    padding-top: 55px;
+    padding-bottom: 95px;
+}
+
+.section-heading {
+    margin-bottom: 37px;
+}
+
+.principle {
+    min-height: 185px;
+    padding: 28px 25px;
+}
+
+.principle:first-child {
+    padding-left: 0;
+}
+
+/* Contact banner */
+.contact-banner {
+    padding: clamp(25px, 4vw, 38px);
+}
+
+/* Keep mobile layout stable */
+@media (max-width: 800px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 65px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        gap: 30px;
+        padding: 52px 0 60px;
+    }
+
+    .hero h1 {
+        font-size: clamp(36px, 9vw, 44px);
+        letter-spacing: -1.7px;
+    }
+
+    .principle {
+        min-height: auto;
+        padding: 22px 0;
+    }
+}
+
+
     </style>
 </head>
 
