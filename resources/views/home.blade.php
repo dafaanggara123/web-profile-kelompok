@@ -1028,6 +1028,109 @@
             }
         }
 
+
+/* ========================================
+   REVISION 01 - RESPONSIVE IMPROVEMENT
+======================================== */
+
+@media (max-width: 600px) {
+
+    .nav-inner {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        padding: 13px 0;
+    }
+
+    .brand {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .nav-button {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+        padding: 9px 11px;
+        font-size: 10px;
+    }
+
+    .nav-links {
+        grid-column: 1 / -1;
+        grid-row: 2;
+
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 12px;
+
+        overflow-x: auto;
+        padding: 7px 0 10px;
+
+        scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-links a {
+        white-space: nowrap;
+        font-size: 11px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 52px 0 60px;
+    }
+
+    .hero h1 {
+        font-size: clamp(36px, 9vw, 44px);
+        line-height: 1.13;
+        letter-spacing: -1.7px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+        line-height: 1.85;
+    }
+
+    .hero-buttons {
+        gap: 9px;
+    }
+
+    .button {
+        padding: 11px 13px;
+        font-size: 11px;
+    }
+
+    .hero-meta {
+        gap: 12px 16px;
+    }
+
+    .identity-panel {
+        width: 100%;
+        max-width: none;
+        padding: 21px;
+    }
+
+    .identity-heading h2 {
+        font-size: 36px;
+    }
+
+    .detail-row {
+        align-items: flex-start;
+    }
+
+    .detail-row strong {
+        max-width: 62%;
+        overflow-wrap: anywhere;
+    }
+}
+
+
     </style>
 </head>
 
